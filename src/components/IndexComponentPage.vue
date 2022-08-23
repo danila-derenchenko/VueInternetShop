@@ -30,11 +30,24 @@
             </div>
         </div>
     </div>
+    <div class="catalogSection container">
+        <p class="catalogBlockHeader">Fetured Items</p>
+        <p class="catalogBlockText">Shop for items based on what we featured in this week</p>
+    </div>
+    <catalogCartBoxComponent />
+    <advantagesComponent />
 </template>
 
 <script>
+    import advantagesComponent from "./advantagesComponent.vue";
+    import catalogCartBoxComponent from "./catalogCartBoxComponent.vue";
+
     export default {
-        name: "IndexComponent"
+        name: "IndexComponent",
+        components: {
+            advantagesComponent,
+            catalogCartBoxComponent,
+        }
     }
 </script>
 
@@ -65,6 +78,7 @@
         font-size: 30px;
         font-weight: 300;
         font-display: normal;
+        flex-wrap: nowrap;
     }
     .indexBannerPink {
         color: #F16D7F;
@@ -124,5 +138,29 @@
     }
     .image-4 {
         background-image: url(../img/sentensesLuxirous.jpg);
+    }
+    .catalogBlockHeader {
+        text-align: center;
+        margin-bottom: 6px;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        color: #222222;
+    }
+    .catalogBlockText {
+        text-align: center;
+    }
+    .catalogSection {
+        margin-bottom: 48px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+    }
+    @media (max-width: 768px) and (min-width: 375px) {
+        .indexLogo {
+            width: 386px;
+            height: 368px;
+        }
     }
 </style>

@@ -59,6 +59,7 @@
     }
     .socialNetworkBlock:hover {
         background-color: #F16D7F;
+        cursor: pointer;
         .socialNetworkimg {
             filter: invert(1);
         }

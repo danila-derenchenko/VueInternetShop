@@ -6,9 +6,9 @@
                 <img class="icon icon-2" src="../img/search.svg" alt="">
             </div>
             <div class="headerLeftGroup">
-                <router-link to="/cart" class="icon"><img src="../img/burgerMenu.svg" alt="" class="icon-3"></router-link>
+                <router-link to="/product" class="icon"><img src="../img/burgerMenu.svg" alt="" class="icon-3"></router-link>
                 <router-link to="/registration" class="icon"><img src="../img/registration.svg" alt="" class="icon-4"></router-link>
-                <router-link to="/product" class="icon"><img src="../img/cart.svg" alt="" class="icon-5"></router-link>
+                <router-link to="/cart" class="icon"><img src="../img/cart.svg" alt="" class="icon-5"></router-link>
             </div>
         </div>
     </div>
