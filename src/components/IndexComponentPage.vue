@@ -1,4 +1,5 @@
 <template>
+    <headerComponent class="header-component" @clickBurger="showMenu()" />
     <div class="logo forHeader">
         <div class="wrapper">
             <div class="logo-left">
@@ -63,12 +64,14 @@
 <script>
     import advantagesComponent from "./advantagesComponent.vue";
     import catalogCartBoxComponent from "./catalogCartBoxComponent.vue";
+    import headerComponent from "./headerComponent.vue";
 
     export default {
         name: "IndexComponent",
         components: {
             advantagesComponent,
             catalogCartBoxComponent,
+            headerComponent,
         },
         data: () => ({
             menu: true,

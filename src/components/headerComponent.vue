@@ -18,7 +18,7 @@
     export default {
         methods: {
             click() {
-                alert("Click")
+                this.$emit("clickBurger")
             }
         }
     }

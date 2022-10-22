@@ -1,4 +1,5 @@
 <template>
+    <headerComponent class="header-component"/>
     <div class="cart">
         <div class="intro">
             <div class="wrapperIntro container">
@@ -29,8 +30,12 @@
 </template>
 
 <script>
+import headerComponent from "./headerComponent.vue";
     export default {
         name: 'CartComponent',
+        components: {
+            headerComponent
+        },
         computed: {
             getCart() {
                 console.log(this.$store.getters.getCart)
