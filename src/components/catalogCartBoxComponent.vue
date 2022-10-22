@@ -2,7 +2,10 @@
     <div class="catalog">
         <div class="wrapper container">
             <div class="card">
-                <img src="../img/catalogImg-1.png" alt="cardImage" class="cartImg">
+                <div class="cardImgBox">
+                    <button class="addCartButton">Add to Cart</button>
+                    <img src="../img/catalogImg-1.png" alt="cardImage" class="cartImg">
+                </div>
                 <div class="cardText">
                     <p class="cardIntroText">ELLERY X M'O CAPSULE</p>
                     <p class="cardSmallText">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
@@ -74,10 +77,28 @@
         height: 581px;
         background: #F8F8F8;
     }
+    .addCartButton {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        right: 50%;
+        left: 50%;
+        width: 100px;
+        height: 50px;
+        display: none;
+    }
+    .cardImgBox {
+        position: relative;
+    }
     .cartImg {
         width: 360px;
         height: 420px;
         margin-bottom: 25px;
+        transition-duration: 0.5s;
+    }
+    .cartImg:hover {
+        filter: brightness(40%);
+        transition-duration: 0.5s;
     }
     .cardText {
         width: 100%;

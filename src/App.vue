@@ -39,6 +39,7 @@ export default {
   }
   .header-component {
     position: fixed;
+    z-index: 1;
   }
   @media (max-width: 768px) and (min-width: 375px) {
     .container {

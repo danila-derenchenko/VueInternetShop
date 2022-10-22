@@ -10,6 +10,28 @@
                     <span class="indexBannerBold">THE BRAND</span><br>OF LUXERIOUS <span class="indexBannerPink">FASHION</span>
                 </p>
             </div>
+            <ul class="menu" v-show="this.menu">
+                <li class="close" @click="showMenu()"><img src="../img/CloseButton.svg" alt="close" class="closeMenu"></li>
+                <li class="menuIntro">MENU</li>
+                <li class="menuCategory">MAN</li>
+                <li class="menuElement">Accessories</li>
+                <li class="menuElement">Bags</li>
+                <li class="menuElement">Denim</li>
+                <li class="menuElement">T-Shirts</li>
+                <li class="menuCategory">WOMAN</li>
+                <li class="menuElement">Accessories</li>
+                <li class="menuElement">Jackets & Coats</li>
+                <li class="menuElement">Polos</li>
+                <li class="menuElement">T-Shirts</li>
+                <li class="menuElement">Shirts</li>
+                <li class="menuCategory">KIDS</li>
+                <li class="menuElement">Accessories</li>
+                <li class="menuElement">Jackets & Coats</li>
+                <li class="menuElement">Polos</li>
+                <li class="menuElement">T-Shirts</li>
+                <li class="menuElement">Shirts</li>
+                <li class="menuElement">Bags</li>
+            </ul>
         </div>
     </div>
     <div class="sentenses container">
@@ -47,6 +69,19 @@
         components: {
             advantagesComponent,
             catalogCartBoxComponent,
+        },
+        data: () => ({
+            menu: true,
+        }),
+        methods: {
+            showMenu() {
+                if (this.menu == false) {
+                    this.menu = true
+                }
+                else {
+                    this.menu = false
+                }
+            }
         }
     }
 </script>
@@ -63,7 +98,47 @@
     }
     .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 0.5fr;
+    }
+    ul > li {
+        list-style-type: none;
+    }
+    .menu {
+        background-color: white;
+        padding-left: 33px;
+        padding-top: 16px;
+        padding-right: 16px;
+    }
+    .menuCategory {
+        color: #F16D7F;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 11px;
+    }
+    .menuElement {
+        margin-left: 21px;
+        color: #6F6E6E;
+        font-size: 14px;
+        margin-bottom: 11px;
+    }
+    .menuElement:hover {
+        font-weight: 700;
+    }
+    .close {
+        float: right;
+    }
+    .close:hover {
+        cursor: pointer;
+    }
+    .menuElement:hover {
+        cursor: pointer;
+    }
+    .menuIntro {
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 24px;
     }
     .indexLogo {
         float: right;

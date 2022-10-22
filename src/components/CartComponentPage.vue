@@ -18,7 +18,7 @@
                             <p class="cartInfoParametr">Price: <span class="cartPink">{{ element.price }}</span></p>
                             <p class="cartInfoParametr">Color: <span class="cartGray">{{ element.color }}</span></p>
                             <p class="cartInfoParametr">Size: <span class="cartGray">{{ element.size }}</span></p>
-                            <p class="cartInfoParametr">Quantity:   <span class="cartGray">2</span></p>
+                            <p class="cartInfoParametr">Quantity:   <span class="cartGray">1</span></p>
                         </div>
                     </div>
                 </div>
@@ -43,9 +43,11 @@
             }
         },
         async mounted() {
-            let cartElements = await fetch("https://raw.githubusercontent.com/danila-derenchenko/forApi/main/cart.json")
-            let result = await cartElements.json()
-            this.$store.dispatch("firstLoadingCart", result)        
+            if (this.getCart.length != 1) {
+                let cartElements = await fetch("https://raw.githubusercontent.com/danila-derenchenko/forApi/main/cart.json")
+                let result = await cartElements.json()
+                this.$store.dispatch("firstLoadingCart", result)      
+            }  
         }
     }
 </script>

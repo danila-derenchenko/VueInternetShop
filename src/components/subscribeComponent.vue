@@ -33,6 +33,9 @@
         width: 100%;
         height: 448px;
         background-image: url(../img/SubscribeBacground.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
     .wrapper {
         height: 100%;
