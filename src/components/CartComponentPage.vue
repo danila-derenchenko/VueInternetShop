@@ -23,8 +23,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="buttonBox">
+                    <button class="buttonForm buttonCart">CLEAR SHOPPING CART</button>
+                    <button class="buttonForm buttonCart">CONTINUE SHOPPING</button>
+                </div>
             </div>
-            <div class="cartForm"></div>
+            <div class="cartForm">
+                    <p class="introForm">SHIPPING ADRESS</p>
+                    <div class="inputBox">
+                        <input type="text" class="inputForm" placeholder="Your country" />
+                        <input type="text" class="inputForm" placeholder="State">
+                        <input type="text" class="inputForm" placeholder="Postcode / Zip">
+                    </div>
+                    <button class="buttonForm">GET A QUOTE</button>
+                    <div class="totalForm">
+                        <p class="subTotal">SUB TOTAL         $900</p>
+                        <p class="grandTotal">GRAND TOTAL      <span class="priceTotal">$900</span></p>
+                        <hr class="hrTotal">
+                        <button class="buttonTotal">PROCEED TO CHECKOUT</button>
+                    </div>
+            </div>
         </div>
     </div>
 </template>
@@ -57,7 +75,7 @@ import headerComponent from "./headerComponent.vue";
     }
 </script>
 
-<style>
+<style scoped>
     .cartEl {
         border: 1px solid black;
         width: 200px;
@@ -107,15 +125,86 @@ import headerComponent from "./headerComponent.vue";
     }
     .wrapper {
         display: grid;
-        grid-template-columns: 1.5fr 1fr;
+        grid-template-columns: 2.5fr 1fr;
     }
     .cartBox {
         width: 652px;
+        margin-bottom: 72px;
     }
-    .cartForm {
+    .introForm {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+    .inputBox {
+        margin-top: 20px;
+        margin-bottom: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .inputForm {
+        padding-top: 13px;
+        padding-bottom: 16px;
+        padding-left: 17px;
         width: 360px;
-        height: 500px;
-        border: 1px solid black;
+    }
+    .buttonForm {
+        border: 1px solid #A4A4A4;
+        background: #FFFF;
+        color: #4A4A4A;
+        padding: 9px 14px;
+    }
+    .buttonCart {
+        padding: 16px 38px;
+    }
+    .buttonBox {
+        display: flex;
+        justify-content: space-between;
+    }
+    .buttonForm:hover {
+        cursor: pointer;
+    }
+    .totalForm {
+        margin-top: 57px;
+        width: 360px;
+        height: 214px;
+        background: #F5F3F3;
+        margin-bottom: 342px;
+        padding: 37px;
+    }
+    .subTotal {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        margin-bottom: 12px;
+    }
+    .grandTotal {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+    .hrTotal {
+        width: 100%;
+        margin-top: 21px;
+        margin-bottom: 17px;
+        background: #E2E2E2;
+    }
+    .buttonTotal {
+        width: 100%;
+        padding: 16px 40px;
+        border: none;
+        background: #F16D7F;
+        color: #FFF;
+    }
+    .buttonTotal:hover {
+        cursor: pointer;
+    }
+    .priceTotal {
+        color: #F16D7F;
     }
     .headerCartElement {
         display: flex;
