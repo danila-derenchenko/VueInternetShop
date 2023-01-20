@@ -37,8 +37,8 @@
                     </div>
                     <button class="buttonForm">GET A QUOTE</button>
                     <div class="totalForm">
-                        <p class="subTotal">SUB TOTAL         $900</p>
-                        <p class="grandTotal">GRAND TOTAL      <span class="priceTotal">$900</span></p>
+                        <p class="subTotal">SUB TOTAL         ${{ this.finalPrice }}</p>
+                        <p class="grandTotal">GRAND TOTAL      <span class="priceTotal">${{ this.finalPrice }}</span></p>
                         <hr class="hrTotal">
                         <button class="buttonTotal">PROCEED TO CHECKOUT</button>
                     </div>
@@ -56,8 +56,10 @@ import headerComponent from "./headerComponent.vue";
         },
         computed: {
             getCart() {
-                console.log(this.$store.getters.getCart)
                 return this.$store.getters.getCart
+            },
+            finalPrice() {
+                return this.$store.getters.getFinalPrice
             }
         },
         methods: {
@@ -69,8 +71,8 @@ import headerComponent from "./headerComponent.vue";
             if (this.getCart.length != 1) {
                 let cartElements = await fetch("https://raw.githubusercontent.com/danila-derenchenko/forApi/main/cart.json")
                 let result = await cartElements.json()
-                this.$store.dispatch("firstLoadingCart", result)      
-            }  
+                this.$store.dispatch("firstLoadingCart", result)
+            }
         }
     }
 </script>

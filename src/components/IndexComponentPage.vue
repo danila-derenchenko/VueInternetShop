@@ -14,12 +14,12 @@
             <ul class="menu" v-show="this.menu">
                 <li class="close" @click="showMenu()"><img src="../img/CloseButton.svg" alt="close" class="closeMenu"></li>
                 <li class="menuIntro">MENU</li>
-                <li class="menuCategory">MAN</li>
+                <li class="menuCategory">MEN</li>
                 <li class="menuElement">Accessories</li>
                 <li class="menuElement">Bags</li>
                 <li class="menuElement">Denim</li>
                 <li class="menuElement">T-Shirts</li>
-                <li class="menuCategory">WOMAN</li>
+                <li class="menuCategory">WOMEN</li>
                 <li class="menuElement">Accessories</li>
                 <li class="menuElement">Jackets & Coats</li>
                 <li class="menuElement">Polos</li>
@@ -58,6 +58,7 @@
         <p class="catalogBlockText">Shop for items based on what we featured in this week</p>
     </div>
     <catalogCartBoxComponent />
+    <button class="indexButton"><router-link to="/catalog" class="indexButtonText">Browse All Product</router-link></button>
     <advantagesComponent />
 </template>
 
@@ -74,7 +75,7 @@
             headerComponent,
         },
         data: () => ({
-            menu: true,
+            menu: false,
         }),
         methods: {
             showMenu() {
@@ -227,6 +228,24 @@
     }
     .catalogBlockText {
         text-align: center;
+    }
+    .indexButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 211px;
+        height: 47px;
+        border: 1px solid #FF6A6A;
+        background: #FFF;
+        margin: 48px auto 95px auto;
+        padding: 14px 38px;
+    }
+    .indexButtonText {
+        text-decoration: none;
+        color: #FF6A6A;
+        text-align: center;
+        width: 100%;
+        height: 100%;
     }
     .catalogSection {
         margin-bottom: 48px;
