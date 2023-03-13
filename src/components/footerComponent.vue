@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="wrapper container">
             <p class="textFooter">
-                © 2021  Brand  All Rights Reserved.
+                © 2023  Brand  All Rights Reserved.
             </p>
             <div class="socialNetwork">
                 <div class="socialNetworkBlock">

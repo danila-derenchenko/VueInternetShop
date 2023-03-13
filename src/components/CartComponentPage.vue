@@ -1,6 +1,6 @@
 <template>
     <headerComponent class="header-component"/>
-    <div class="cart">
+    <div class="cart">3
         <div class="intro">
             <div class="wrapperIntro container">
                 <p class="textIntro">SHOPPING CART</p>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="buttonBox">
                     <button class="buttonForm buttonCart">CLEAR SHOPPING CART</button>
-                    <button class="buttonForm buttonCart">CONTINUE SHOPPING</button>
+                    <router-link to="/catalog"><button class="buttonForm buttonCart">CONTINUE SHOPPING</button></router-link>
                 </div>
             </div>
             <div class="cartForm">

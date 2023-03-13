@@ -58,11 +58,12 @@
         <p class="catalogBlockText">Shop for items based on what we featured in this week</p>
     </div>
     <catalogCartBoxComponent />
-    <button class="indexButton"><router-link to="/catalog" class="indexButtonText">Browse All Product</router-link></button>
+    <button class="indexButton" @click="toCatalog()"><p class="indexButtonText">Browse All Product</p></button>
     <advantagesComponent />
 </template>
 
 <script>
+import router from '@/router';
     import advantagesComponent from "./advantagesComponent.vue";
     import catalogCartBoxComponent from "./catalogCartBoxComponent.vue";
     import headerComponent from "./headerComponent.vue";
@@ -85,6 +86,9 @@
                 else {
                     this.menu = false
                 }
+            },
+            toCatalog() {
+                router.push("/catalog");
             }
         }
     }
@@ -239,6 +243,16 @@
         background: #FFF;
         margin: 48px auto 95px auto;
         padding: 14px 38px;
+        transition-duration: 0.5s;
+    }
+    .indexButton:hover {
+        background: #FF6A6A;
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+    .indexButton:hover .indexButtonText {
+        color: #FFF;
+        transition-duration: 0.5s;
     }
     .indexButtonText {
         text-decoration: none;
