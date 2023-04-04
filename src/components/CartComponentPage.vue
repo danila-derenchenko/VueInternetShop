@@ -1,6 +1,6 @@
 <template>
     <headerComponent class="header-component"/>
-    <div class="cart">3
+    <div class="cart">
         <div class="intro">
             <div class="wrapperIntro container">
                 <p class="textIntro">SHOPPING CART</p>

@@ -25,6 +25,7 @@ export default {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    font-style: normal;
     box-sizing: border-box;
   }
   .container {

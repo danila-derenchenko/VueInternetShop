@@ -255,7 +255,6 @@ import router from '@/router';
         transition-duration: 0.5s;
     }
     .indexButtonText {
-        text-decoration: none;
         color: #FF6A6A;
         text-align: center;
         width: 100%;
